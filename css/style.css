@@ -1,0 +1,192 @@
+/* ===== Base ===== */
+body {
+  background-color: #121212;
+  color: #E0E0E0;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.class1 {
+  line-height: 1.5;
+}
+
+/* ===== Links ===== */
+a.classinista:link { color: white; }
+a.classinista:visited { color: red; }
+a.classinista:hover { color: gold; }
+a.classinista:active { color: green; }
+
+/* ===== Layout ===== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.sidebar {
+  width: 220px;
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 850px;
+}
+
+/* ===== Sections ===== */
+#sebalan {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 16px;
+  direction: rtl;
+  box-shadow: inset 0 0 3px 5px black;
+  height: 150px;
+  font-size: 50px;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: #1e1e1e;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(144, 27, 240, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #ff9800;
+  font-size: 30px;
+  text-align: center;
+}
+
+.card p {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.card img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== Headings ===== */
+h1, h2 {
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #901bf0, #ff9800);
+  border-radius: 50px;
+  width: fit-content;
+  margin: 30px auto;
+  box-shadow: 0 0 15px rgba(144, 27, 240, 0.6);
+  transition: 0.4s;
+}
+
+
+/* ===== Dropdown / Details ===== */
+details summary,
+.dropdown summary {
+  cursor: pointer;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff9800;
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  border: 2px solid #901bf0;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.4s;
+  list-style: none;
+}
+
+details summary::-webkit-details-marker,
+.dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary,
+.dropdown[open] summary {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: #fff;
+}
+
+.dropdown {
+  background-color: #121212;
+  border: 2px solid #901bf0;
+  border-radius: 15px;
+  width: 1000px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.dropdown li {
+  margin: 0.5rem 0;
+}
+
+.dropdown a {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 2px solid #901bf0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.dropdown a:hover {
+  background-color: #901bf0;
+  color: #fff;
+  transform: scale(1.05);
+}
+.contact-table { border-collapse: collapse; width: 80%; margin: 2rem auto; background: #1e1e1e; border-radius: 15px; overflow: hidden; box-shadow: 0 0 20px rgba(144, 27, 240, 0.4); } .contact-table caption { font-size: 2rem; padding: 1rem; font-weight: bold; color: #fff; background: linear-gradient(135deg, #901bf0, #ff9800); text-shadow: 0 0 10px rgba(255,255,255,0.3); border-bottom: 3px solid #901bf0; transition: all 0.4s ease; cursor: pointer; } .contact-table th, .contact-table td { padding: 14px 22px; text-align: center; font-size: 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.1); color: #e0e0e0; transition: background 0.3s ease, transform 0.2s ease; } .contact-table th { background: rgba(144, 27, 240, 0.2); font-weight: bold; color: #ff9800; } .contact-table td:hover, .contact-table th:hover { background: rgba(144, 27, 240, 0.25); color: #fff; transform: scale(1.03); border-radius: 8px; } .contact-table a.classinista { text-decoration: none; color: #ff9800; font-weight: bold; border: 2px solid #901bf0; padding: 6px 14px; border-radius: 25px; transition: all 0.3s ease; display: inline-block; } .contact-table a.classinista:hover { background: #901bf0; color: #fff; transform: scale(1.08); box-shadow: 0 0 15px rgba(144,27,240,0.8); }
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .container { flex-direction: column; padding: 1rem; }
+  .sidebar, .main-content { width: 100%; }
+  h1, h2 { font-size: 24px; }
+  .dropdown { width: 90%; }
+  #sebalan { height: 100px; font-size: 30px; }
+  .contact-table { width: 95%; } 
+  .contact-table caption { font-size: 1.5rem; padding: 0.8rem; }
+   .contact-table th, .contact-table td { font-size: 1rem; padding: 10px; } 
+}
+
+@media (max-width: 480px) {
+  body { font-size: 14px; }
+  h1, h2 { font-size: 20px; }
+  #sebalan { height: 80px; font-size: 22px; }
+  .contact-table { width: 95%; }
+   .contact-table caption { font-size: 1.5rem; padding: 0.8rem; } 
+   .contact-table th, .contact-table td { font-size: 1rem; padding: 10px; } 
+
+}
